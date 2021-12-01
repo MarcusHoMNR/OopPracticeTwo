@@ -1,9 +1,6 @@
 package practice09;
 
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public class Teacher extends Person{
     private LinkedList<Klass> klasses = new LinkedList<>();
@@ -41,7 +38,7 @@ public class Teacher extends Person{
 
     public boolean isTeaching(Student student) {
         for (Klass klass: klasses) {
-            if (student.getKlass().getNumber() == klass.getNumber()) {
+            if (klass.isIn(student)) {
                 return true;
             }
         }

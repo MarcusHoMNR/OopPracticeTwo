@@ -9,6 +9,9 @@ public class Klass {
     private Student leader;
     private List<Student> studentList = new ArrayList<>();
 
+    public boolean isIn(Student student) {
+        return number == student.getKlass().getNumber();
+    }
     public Klass(int number) {
         this.number = number;
     }
