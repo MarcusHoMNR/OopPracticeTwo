@@ -38,7 +38,7 @@ public class Klass {
 
         if (studentList.contains(student)) {
             if (teacher != null) {
-                System.out.print(String.format("I am %s. I know Jerry become Leader of Class %d.\n", teacher.getName(), number));
+                System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number));
             }
             this.leader = student;
         } else {
@@ -53,7 +53,7 @@ public class Klass {
 
     public void appendMember(Student student) {
         if (teacher != null) {
-            System.out.print(String.format("I am %s. I know Jerry has joined Class %d.\n", teacher.getName(), number));
+            System.out.print(String.format("I am %s. I know %s has joined Class %d.\n", teacher.getName(),student.getName(), number));
         }
         studentList.add(student);
     }
