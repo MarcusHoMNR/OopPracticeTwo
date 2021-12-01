@@ -13,6 +13,6 @@ public class Student extends Person{
     }
 
     public String introduce() {
-        return String.format("My name is %s. I am %s years old. I am a Student. I am at Class %d.", this.getName(), this.getAge(), this.klass);
+        return String.format(super.introduce() + " I am a Student. I am at Class %d.", this.klass);
     }
 }
