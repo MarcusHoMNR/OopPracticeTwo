@@ -23,6 +23,10 @@ public class Person {
         return age;
     }
 
+    public boolean equals(Object person) {
+        return id == ((Person)person).getId();
+    }
+
     public String introduce() {
         return String.format("My name is %s. I am %d years old.", this.name, this.age);
     }

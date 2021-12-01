@@ -18,10 +18,10 @@ practice10/Klass.java
  practice10.Klass
 practice01/Person.java
  practice01.Person
-practice07/Student.java
- practice07.Student
-practice09/Student.java
- practice09.Student
+practice08/Student.java
+ practice08.Student
+practice09/Person.java
+ practice09.Person
 practice02/Person.java
  practice02.Person
 practice03/Person.java
@@ -34,31 +34,31 @@ practice05/Student.java
  practice05.Student
 practice04/Student.java
  practice04.Student
-practice09/Person.java
- practice09.Person
-practice07/Klass.java
- practice07.Klass
+practice09/Student.java
+ practice09.Student
+practice08/Klass.java
+ practice08.Klass
 practice02/Student.java
  practice02.Student
 practice05/Teacher.java
  practice05.Teacher
 practice06/Person.java
  practice06.Person
-practice07/Person.java
- practice07.Person
+practice08/Teacher.java
+ practice08.Teacher
 practice03/Student.java
  practice03.Student
-practice07/Teacher.java
- practice07.Teacher
+practice08/Person.java
+ practice08.Person
 practice09/Teacher.java
  practice09.Teacher
 practice06/Teacher.java
  practice06.Teacher
-practice08/Person.java
- practice08.Person
-practice08/Teacher.java
- practice08.Teacher
-practice08/Klass.java
- practice08.Klass
-practice08/Student.java
- practice08.Student
+practice07/Student.java
+ practice07.Student
+practice07/Klass.java
+ practice07.Klass
+practice07/Teacher.java
+ practice07.Teacher
+practice07/Person.java
+ practice07.Person

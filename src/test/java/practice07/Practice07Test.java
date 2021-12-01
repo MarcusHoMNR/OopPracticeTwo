@@ -24,10 +24,7 @@ public class Practice07Test {
     public void should_person_with_same_id_be_same_one() throws Exception {
         Person person1 = new Person(1, "Tom", 21);
         Person person2 = new Person(1, "Tom", 21);
-//        assertThat(person1).isEqualTo(person2); // how could two object be the same with different address
-        assertThat(person1.getId()).isEqualTo(person2.getId());
-        assertThat(person1.getName()).isEqualTo(person2.getName());
-        assertThat(person1.getAge()).isEqualTo(person2.getAge());
+        assertThat(person1).isEqualTo(person2);
     }
 
     @Test
