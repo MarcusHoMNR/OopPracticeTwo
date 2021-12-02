@@ -1,9 +1,11 @@
 package practice07;
 
+import java.util.Objects;
+
 public class Person {
-    private int id;
-    private String name;
-    private int age;
+    private final int id;
+    private final String name;
+    private final int age;
 
     public int getId() {
         return id;
@@ -23,8 +25,11 @@ public class Person {
         return age;
     }
 
+    @Override
     public boolean equals(Object person) {
-        return id == ((Person)person).getId();
+        if (!Objects.isNull(person))
+            return id == ((Person) person).getId();
+        return false;
     }
 
     public String introduce() {

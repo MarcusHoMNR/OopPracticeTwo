@@ -16,11 +16,24 @@ public class Teacher extends Person {
         return klass;
     }
 
+    @Override
     public String introduce() {
-        return String.format(super.introduce() + " I am a Teacher. I teach %s.", this.klass == null ? "No Class" : klass.getDisplayName());
+        String displayClass;
+        if (this.klass == null) {
+            displayClass = "No Class";
+        } else {
+            displayClass = klass.getDisplayName();;
+        }
+        return String.format(super.introduce() + " I am a Teacher. I teach %s.", displayClass);
     }
 
     public String introduceWith(Student student) {
-        return String.format(super.introduce() + " I am a Teacher. I %steach %s.", student.getKlass().getNumber() == klass.getNumber()? "" : "don't ", student.getName());
+        String teachAction;
+        if (student.getKlass().getNumber() == klass.getNumber()) {
+            teachAction = "teach";
+        } else {
+            teachAction = "don't teach";
+        }
+        return String.format(super.introduce() + " I am a Teacher. I %s %s.", teachAction, student.getName());
     }
 }

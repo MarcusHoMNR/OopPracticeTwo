@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Klass {
-    private int number;
+    private final int number;
     private Student leader;
-    private List<Student> studentList = new ArrayList<>();
+    private final List<Student> studentList = new ArrayList<>();
 
     public boolean isIn(Student student) {
         return number == student.getKlass().getNumber();
@@ -33,7 +33,6 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
-
         if (studentList.contains(student)) {
             this.leader = student;
         } else {

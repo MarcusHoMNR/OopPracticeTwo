@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Klass {
-    private int number;
+    private final int number;
     private Student leader;
-    private List<Student> studentList = new ArrayList<>();
+    private final List<Student> studentList = new ArrayList<>();
 
     public Klass(int number) {
         this.number = number;

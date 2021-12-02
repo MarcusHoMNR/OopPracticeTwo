@@ -1,6 +1,7 @@
 package practice09;
 
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Teacher extends Person{
     private LinkedList<Klass> klasses = new LinkedList<>();
@@ -18,30 +19,34 @@ public class Teacher extends Person{
         return klasses;
     }
 
+    @Override
     public String introduce() {
-        return String.format(super.introduce() + " I am a Teacher. I teach %s.", this.klasses.size() == 0 ? "No Class" :
-                "Class " + getAllKlasses()
-        );
+        String displayClass;
+        if (this.klasses.size() == 0) {
+            displayClass = "No Class";
+        } else {
+            displayClass = "Class " + getAllKlasses();
+        }
+        return String.format(super.introduce() + " I am a Teacher. I teach %s.", displayClass);
     }
 
     public String introduceWith(Student student) {
-        return String.format(super.introduce() + " I am a Teacher. I %steach %s.", isTeaching(student)? "" : "don't ", student.getName());
+        String teachAction;
+        if (isTeaching(student)) {
+            teachAction = "teach";
+        } else {
+            teachAction = "don't teach";
+        }
+        return String.format(super.introduce() + " I am a Teacher. I %s %s.", teachAction, student.getName());
     }
 
     private String getAllKlasses() {
-        String allKlasses = "";
-        for (Klass klass: klasses) {
-            allKlasses += klass.getNumber() + (klass != klasses.getLast()? ", " : "");
-        }
-        return allKlasses;
+        return klasses.stream()
+                .map(klass -> String.valueOf(klass.getNumber()))
+                .collect(Collectors.joining(", "));
     }
 
     public boolean isTeaching(Student student) {
-        for (Klass klass: klasses) {
-            if (klass.isIn(student)) {
-                return true;
-            }
-        }
-        return false;
+        return klasses.stream().anyMatch(klass -> klass.isIn(student));
     }
 }

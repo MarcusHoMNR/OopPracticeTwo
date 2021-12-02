@@ -1,7 +1,7 @@
 package practice06;
 
 public class Student extends Person{
-    private Klass klass;
+    private final Klass klass;
 
     public Student(String name, int age, Klass klass) {
         super(name, age);
@@ -12,6 +12,7 @@ public class Student extends Person{
         return klass;
     }
 
+    @Override
     public String introduce() {
         return String.format(super.introduce() + " I am a Student. I am at %s.", this.klass.getDisplayName());
     }

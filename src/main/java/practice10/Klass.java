@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Klass {
-    private int number;
+    private final int number;
     private Teacher teacher;
     private Student leader;
-    private List<Student> studentList = new ArrayList<>();
+    private final List<Student> studentList = new ArrayList<>();
 
     public boolean isIn(Student student) {
         return number == student.getKlass().getNumber();
@@ -38,7 +38,7 @@ public class Klass {
 
         if (studentList.contains(student)) {
             if (teacher != null) {
-                System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number));
+                System.out.printf("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number);
             }
             this.leader = student;
         } else {
@@ -53,7 +53,7 @@ public class Klass {
 
     public void appendMember(Student student) {
         if (teacher != null) {
-            System.out.print(String.format("I am %s. I know %s has joined Class %d.\n", teacher.getName(),student.getName(), number));
+            System.out.printf("I am %s. I know %s has joined Class %d.\n", teacher.getName(),student.getName(), number);
         }
         studentList.add(student);
     }
